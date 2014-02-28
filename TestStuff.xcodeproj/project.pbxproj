@@ -26,6 +26,7 @@
 		68A6A8D218C0215500DFF0FB /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A6A8D118C0215500DFF0FB /* HomeViewController.m */; };
 		68A6A8D418C117AD00DFF0FB /* flowers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68A6A8D318C117AD00DFF0FB /* flowers.jpg */; };
 		68A6A8D818C1234300DFF0FB /* AMBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A6A8D718C1234300DFF0FB /* AMBlurView.m */; };
+		68A6A8DB18C141B700DFF0FB /* MenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A6A8DA18C141B700DFF0FB /* MenuItemCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		68A6A8D318C117AD00DFF0FB /* flowers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = flowers.jpg; sourceTree = "<group>"; };
 		68A6A8D618C1234300DFF0FB /* AMBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBlurView.h; sourceTree = "<group>"; };
 		68A6A8D718C1234300DFF0FB /* AMBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBlurView.m; sourceTree = "<group>"; };
+		68A6A8D918C141B700DFF0FB /* MenuItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemCell.h; sourceTree = "<group>"; };
+		68A6A8DA18C141B700DFF0FB /* MenuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemCell.m; sourceTree = "<group>"; };
 		A0DFF62EE8C94D9EA8141CE0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -143,6 +146,8 @@
 				68A6A8D118C0215500DFF0FB /* HomeViewController.m */,
 				68A6A8D618C1234300DFF0FB /* AMBlurView.h */,
 				68A6A8D718C1234300DFF0FB /* AMBlurView.m */,
+				68A6A8D918C141B700DFF0FB /* MenuItemCell.h */,
+				68A6A8DA18C141B700DFF0FB /* MenuItemCell.m */,
 			);
 			path = TestStuff;
 			sourceTree = "<group>";
@@ -320,6 +325,7 @@
 				686F5B2E18BC21AC0039C0DE /* AppDelegate.m in Sources */,
 				68A6A8D818C1234300DFF0FB /* AMBlurView.m in Sources */,
 				686F5B2A18BC21AC0039C0DE /* main.m in Sources */,
+				68A6A8DB18C141B700DFF0FB /* MenuItemCell.m in Sources */,
 				680BB9D818C00500002026F2 /* SlideOutViewController.m in Sources */,
 				68A6A8CF18C0212500DFF0FB /* MenuViewController.m in Sources */,
 				68A6A8D218C0215500DFF0FB /* HomeViewController.m in Sources */,
@@ -405,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -438,7 +444,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
