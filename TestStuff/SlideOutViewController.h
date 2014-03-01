@@ -8,17 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol CenterViewControllerProtocol <NSObject>
 
-
-@end
 
 @interface SlideOutViewController : UIViewController
 
-@property (nonatomic, strong) UIViewController *leftViewController;
-@property (nonatomic, strong) UIViewController<CenterViewControllerProtocol> *centerViewController;
-
-- (id)initWithLeftViewController:(UIViewController *)leftViewController
-         andCenterViewController:(UIViewController<CenterViewControllerProtocol> *)centerViewController;
 
 @end

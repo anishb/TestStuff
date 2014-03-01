@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "SlideOutViewController.h"
 
-@interface HomeViewController : UIViewController <CenterViewControllerProtocol>
+@interface HomeViewController : UIViewController
+
+@property (nonatomic, weak) IBOutlet UIImageView *flowerView;
 
 @end

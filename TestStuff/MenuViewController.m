@@ -7,10 +7,11 @@
 //
 
 #import "MenuViewController.h"
-#import "AMBlurView.h"
+#import "SlideOutViewController.h"
+#import <FXBlurView/FXBlurView.h>
 
 @interface MenuViewController ()
-@property (nonatomic, weak) IBOutlet AMBlurView *blurView;
+@property (nonatomic, weak) IBOutlet FXBlurView *blurView;
 @end
 
 @implementation MenuViewController
@@ -29,6 +30,15 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor clearColor];
+    
+    // Set blurring
+    self.blurView.blurEnabled = YES;
+    self.blurView.dynamic = YES;
+
+    self.blurView.tintColor = [UIColor clearColor];
+    //self.blurView.tintColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.65];
+    
+    NSLog(@"MenuVC viewDidLoad");
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,5 +46,18 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)setUnderlyingView:(UIView *)underlyingView
+{
+    
+    self.blurView.underlyingView = underlyingView;
+    [self.blurView setNeedsDisplay];
+}
+
+- (UIView *)underlyingView
+{
+    return self.blurView.underlyingView;
+}
+
 
 @end

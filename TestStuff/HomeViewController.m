@@ -7,9 +7,10 @@
 //
 
 #import "HomeViewController.h"
+#import <FXBlurView/FXBlurView.h>
 
 @interface HomeViewController ()
-
+@property (nonatomic, weak) IBOutlet FXBlurView *blurBox;
 @end
 
 @implementation HomeViewController
@@ -29,6 +30,8 @@
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor blueColor];
     self.navigationItem.title = @"Center View";
+    
+    NSLog(@"HomeVC viewDidLoad");
 }
 
 - (void)didReceiveMemoryWarning
