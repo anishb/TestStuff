@@ -10,6 +10,7 @@
 #import "MenuViewController.h"
 #import "HomeViewController.h"
 
+
 @interface SlideOutViewController ()
 @property (nonatomic, strong) UINavigationController *navController;
 @property (nonatomic, strong) MenuViewController *menuViewController;
@@ -47,6 +48,16 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     NSLog(@"SlideOutVC viewDidLoad");
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(homeLoaded:)
+                                                 name:NOTIFICATION_HOME_VIEW_DID_LOAD
+                                               object:nil];
+}
+
+- (void)homeLoaded:(NSNotification *)notification
+{
+    self.menuViewController.underlyingView = self.homeViewController.flowerView;
 }
 
 - (void)didReceiveMemoryWarning

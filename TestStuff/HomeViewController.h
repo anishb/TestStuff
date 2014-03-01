@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "SlideOutViewController.h"
 
+extern NSString *const NOTIFICATION_HOME_VIEW_DID_LOAD;
+
 @interface HomeViewController : UIViewController
 
 @property (nonatomic, weak) IBOutlet UIImageView *flowerView;
