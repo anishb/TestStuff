@@ -25,10 +25,17 @@
     return self;
 }
 
+- (void)loadView
+{
+    self.view = [[FXBlurView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
+    self.view.tintColor = [UIColor whiteColor];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    /*
     self.view.backgroundColor = [UIColor clearColor];
     
     // Set blurring
@@ -37,6 +44,7 @@
 
     self.blurView.tintColor = [UIColor clearColor];
     //self.blurView.tintColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.65];
+     */
     
     NSLog(@"MenuVC viewDidLoad");
 }
@@ -45,18 +53,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)setUnderlyingView:(UIView *)underlyingView
-{
-    
-    self.blurView.underlyingView = underlyingView;
-    [self.blurView setNeedsDisplay];
-}
-
-- (UIView *)underlyingView
-{
-    return self.blurView.underlyingView;
 }
 
 

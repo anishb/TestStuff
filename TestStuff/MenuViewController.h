@@ -10,5 +10,4 @@
 
 @interface MenuViewController : UIViewController
 
-@property (nonatomic, weak) UIView *underlyingView;
 @end

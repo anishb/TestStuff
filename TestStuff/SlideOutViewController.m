@@ -38,6 +38,7 @@
     
     MenuViewController *menuVC = [[UIStoryboard storyboardWithName:@"Main" bundle:Nil] instantiateViewControllerWithIdentifier:@"MenuViewController"];
     [self addChildViewController:menuVC];
+    menuVC.view.frame = CGRectMake(-160, 0, menuVC.view.frame.size.width, menuVC.view.frame.size.height);
     [view addSubview:menuVC.view];
 
     self.view = view;
@@ -48,16 +49,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     NSLog(@"SlideOutVC viewDidLoad");
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(homeLoaded:)
-                                                 name:NOTIFICATION_HOME_VIEW_DID_LOAD
-                                               object:nil];
-}
-
-- (void)homeLoaded:(NSNotification *)notification
-{
-    self.menuViewController.underlyingView = self.homeViewController.flowerView;
 }
 
 - (void)didReceiveMemoryWarning

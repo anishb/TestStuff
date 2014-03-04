@@ -9,10 +9,7 @@
 #import "HomeViewController.h"
 #import <FXBlurView/FXBlurView.h>
 
-NSString *const NOTIFICATION_HOME_VIEW_DID_LOAD = @"HomeViewDidLoad";
-
 @interface HomeViewController ()
-@property (nonatomic, weak) IBOutlet FXBlurView *blurBox;
 @end
 
 @implementation HomeViewController
@@ -34,7 +31,6 @@ NSString *const NOTIFICATION_HOME_VIEW_DID_LOAD = @"HomeViewDidLoad";
     self.navigationItem.title = @"Center View";
     
     NSLog(@"HomeVC viewDidLoad");
-    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_HOME_VIEW_DID_LOAD object:self];
 }
 
 - (void)didReceiveMemoryWarning
