@@ -27,6 +27,7 @@
 		68A6A8D418C117AD00DFF0FB /* flowers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68A6A8D318C117AD00DFF0FB /* flowers.jpg */; };
 		68A6A8D818C1234300DFF0FB /* AMBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A6A8D718C1234300DFF0FB /* AMBlurView.m */; };
 		68A6A8DB18C141B700DFF0FB /* MenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A6A8DA18C141B700DFF0FB /* MenuItemCell.m */; };
+		68BA5AED18C65CE100562482 /* iPhone_header_menu-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68BA5AEC18C65CE100562482 /* iPhone_header_menu-icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		68A6A8D718C1234300DFF0FB /* AMBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBlurView.m; sourceTree = "<group>"; };
 		68A6A8D918C141B700DFF0FB /* MenuItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemCell.h; sourceTree = "<group>"; };
 		68A6A8DA18C141B700DFF0FB /* MenuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemCell.m; sourceTree = "<group>"; };
+		68BA5AEC18C65CE100562482 /* iPhone_header_menu-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone_header_menu-icon@2x.png"; sourceTree = "<group>"; };
 		A0DFF62EE8C94D9EA8141CE0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -184,6 +186,7 @@
 		68A6A8D518C117B000DFF0FB /* images */ = {
 			isa = PBXGroup;
 			children = (
+				68BA5AEC18C65CE100562482 /* iPhone_header_menu-icon@2x.png */,
 				68A6A8D318C117AD00DFF0FB /* flowers.jpg */,
 			);
 			name = images;
@@ -271,6 +274,7 @@
 				686F5B3618BC21AC0039C0DE /* Images.xcassets in Resources */,
 				686F5B2818BC21AC0039C0DE /* InfoPlist.strings in Resources */,
 				686F5B3118BC21AC0039C0DE /* Main.storyboard in Resources */,
+				68BA5AED18C65CE100562482 /* iPhone_header_menu-icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

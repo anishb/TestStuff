@@ -27,10 +27,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor blueColor];
     self.navigationItem.title = @"Center View";
     
     NSLog(@"HomeVC viewDidLoad");
+}
+
+- (IBAction)menuButtonPressed:(id)sender
+{
+    if ([self.delegate respondsToSelector:@selector(slideMenu)]) {
+        [self.delegate slideMenu];
+    }
 }
 
 - (void)didReceiveMemoryWarning

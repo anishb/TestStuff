@@ -59,7 +59,7 @@
         <!--Home View Controller-->
         <scene sceneID="7ag-Nm-cPG">
             <objects>
-                <viewController id="OvV-8X-NEe" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="OvV-8X-NEe" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6iI-yu-h3u"/>
                         <viewControllerLayoutGuide type="bottom" id="fMq-A4-vqE"/>
@@ -82,7 +82,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="EGh-Dp-Ksz"/>
+                    <navigationItem key="navigationItem" id="EGh-Dp-Ksz">
+                        <barButtonItem key="leftBarButtonItem" image="iPhone_header_menu-icon.png" style="plain" id="Vdm-zQ-gST">
+                            <connections>
+                                <action selector="menuButtonPressed:" destination="OvV-8X-NEe" id="qTv-Vq-Sm1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k5a-QV-OH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,6 +97,7 @@
     </scenes>
     <resources>
         <image name="flowers.jpg" width="320" height="568"/>
+        <image name="iPhone_header_menu-icon.png" width="21" height="13"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

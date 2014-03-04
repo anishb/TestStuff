@@ -10,11 +10,14 @@
 #import "MenuViewController.h"
 #import "HomeViewController.h"
 
+int const MENU_SLIDE_DURATION = 1.0;
+int const MENU_SLIDE_DELAY = 0.0;
 
-@interface SlideOutViewController ()
+@interface SlideOutViewController () <HomeViewControllerDelegate>
 @property (nonatomic, strong) UINavigationController *navController;
 @property (nonatomic, strong) MenuViewController *menuViewController;
 @property (nonatomic, strong) HomeViewController *homeViewController;
+@property (nonatomic) BOOL menuActive;
 @end
 
 @implementation SlideOutViewController
@@ -32,14 +35,20 @@
 {
     UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
     
+    
     _navController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SlideOutNagivationController"];
+    HomeViewController *homeVC = (HomeViewController *)_navController.viewControllers[0];
+    homeVC.delegate = self;
     [self addChildViewController:_navController];
     [view addSubview:_navController.view];
     
-    MenuViewController *menuVC = [[UIStoryboard storyboardWithName:@"Main" bundle:Nil] instantiateViewControllerWithIdentifier:@"MenuViewController"];
-    [self addChildViewController:menuVC];
-    menuVC.view.frame = CGRectMake(-160, 0, menuVC.view.frame.size.width, menuVC.view.frame.size.height);
-    [view addSubview:menuVC.view];
+    _menuViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:Nil] instantiateViewControllerWithIdentifier:@"MenuViewController"];
+    [self addChildViewController:_menuViewController];
+    _menuViewController.view.frame = CGRectMake(-_menuViewController.view.frame.size.width,
+                                                0,
+                                                _menuViewController.view.frame.size.width,
+                                                _menuViewController.view.frame.size.height);
+    [view addSubview:_menuViewController.view];
 
     self.view = view;
 }
@@ -49,12 +58,36 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     NSLog(@"SlideOutVC viewDidLoad");
+    _menuActive = NO;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)slideMenu
+{
+    if (_menuActive) {
+        [UIView animateWithDuration:MENU_SLIDE_DURATION
+                              delay:MENU_SLIDE_DELAY
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+                             CGRect menuFrame = _menuViewController.view.frame;
+                             _menuViewController.view.frame = CGRectMake(-menuFrame.size.width, 0, menuFrame.size.width, menuFrame.size.height);
+                         } completion:nil];
+        _menuActive = NO;
+    } else {
+        [UIView animateWithDuration:MENU_SLIDE_DURATION
+                              delay:MENU_SLIDE_DELAY
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+                             CGRect menuFrame = _menuViewController.view.frame;
+                             _menuViewController.view.frame = CGRectMake(-menuFrame.size.width/2, 0, menuFrame.size.width, menuFrame.size.height);
+                         } completion:nil];
+        _menuActive = YES;
+    }
 }
 
 @end

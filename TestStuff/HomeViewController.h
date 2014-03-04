@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "SlideOutViewController.h"
 
+@protocol HomeViewControllerDelegate <NSObject>
+- (void)slideMenu;
+@end
+
 @interface HomeViewController : UIViewController
+
+@property (nonatomic, weak) id<HomeViewControllerDelegate> delegate;
 
 @end
