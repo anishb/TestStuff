@@ -37,12 +37,22 @@
     // Add gesture recognizers
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
     [self.view addGestureRecognizer:tapGesture];
+    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(viewSwiped:)];
+    swipeGesture.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.view addGestureRecognizer:swipeGesture];
     
     
     NSLog(@"MenuVC viewDidLoad");
 }
 
 - (void)viewTapped:(UIGestureRecognizer *)gesture
+{
+    if ([self.delegate respondsToSelector:@selector(hideMenu)]) {
+        [self.delegate hideMenu];
+    }
+}
+
+- (void)viewSwiped:(UISwipeGestureRecognizer *)gesture
 {
     if ([self.delegate respondsToSelector:@selector(hideMenu)]) {
         [self.delegate hideMenu];

@@ -10,8 +10,8 @@
 #import "MenuViewController.h"
 #import "HomeViewController.h"
 
-int const MENU_SLIDE_DURATION = 1.0;
-int const MENU_SLIDE_DELAY = 0.0;
+CGFloat const MENU_SLIDE_DURATION = 0.75;
+CGFloat const MENU_SLIDE_DELAY = 0.0;
 
 @interface SlideOutViewController () <HomeViewControllerDelegate, MenuViewControllerDelegate>
 @property (nonatomic, strong) UINavigationController *navController;
@@ -76,7 +76,7 @@ int const MENU_SLIDE_DELAY = 0.0;
     if (!_menuActive) {
         [UIView animateWithDuration:MENU_SLIDE_DURATION
                               delay:MENU_SLIDE_DELAY
-                            options:UIViewAnimationOptionCurveEaseInOut
+                            options:UIViewAnimationOptionCurveLinear | UIViewAnimationOptionBeginFromCurrentState
                          animations:^{
                              CGRect menuFrame = _menuViewController.view.frame;
                              _menuViewController.view.frame = CGRectMake(0, 0, menuFrame.size.width, menuFrame.size.height);
