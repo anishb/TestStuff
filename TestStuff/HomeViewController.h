@@ -10,7 +10,7 @@
 #import "SlideOutViewController.h"
 
 @protocol HomeViewControllerDelegate <NSObject>
-- (void)slideMenu;
+- (void)showMenu;
 @end
 
 @interface HomeViewController : UIViewController

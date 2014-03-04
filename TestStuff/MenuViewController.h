@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol MenuViewControllerDelegate <NSObject>
+- (void)hideMenu;
+@end
+
 @interface MenuViewController : UIViewController
+
+@property (nonatomic, weak) id<MenuViewControllerDelegate> delegate;
 
 @end

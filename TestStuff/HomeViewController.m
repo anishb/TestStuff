@@ -7,7 +7,7 @@
 //
 
 #import "HomeViewController.h"
-#import <FXBlurView/FXBlurView.h>
+#import "CBSiBlurView.h"
 
 @interface HomeViewController ()
 @end
@@ -34,8 +34,8 @@
 
 - (IBAction)menuButtonPressed:(id)sender
 {
-    if ([self.delegate respondsToSelector:@selector(slideMenu)]) {
-        [self.delegate slideMenu];
+    if ([self.delegate respondsToSelector:@selector(showMenu)]) {
+        [self.delegate showMenu];
     }
 }
 

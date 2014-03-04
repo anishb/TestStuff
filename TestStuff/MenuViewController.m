@@ -8,10 +8,10 @@
 
 #import "MenuViewController.h"
 #import "SlideOutViewController.h"
-#import <FXBlurView/FXBlurView.h>
+#import "CBSiBlurView.h"
 
 @interface MenuViewController ()
-@property (nonatomic, weak) IBOutlet FXBlurView *blurView;
+@property (nonatomic, weak) IBOutlet CBSiBlurView *blurView;
 @end
 
 @implementation MenuViewController
@@ -25,27 +25,15 @@
     return self;
 }
 
-- (void)loadView
-{
-    self.view = [[FXBlurView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
-    self.view.tintColor = [UIColor whiteColor];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    /*
     self.view.backgroundColor = [UIColor clearColor];
     
     // Set blurring
-    self.blurView.blurEnabled = YES;
-    self.blurView.dynamic = YES;
+    self.blurView.blurTintColor = [UIColor clearColor];
 
-    self.blurView.tintColor = [UIColor clearColor];
-    //self.blurView.tintColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.65];
-     */
-    
     // Add gesture recognizers
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
     [self.view addGestureRecognizer:tapGesture];
@@ -56,7 +44,9 @@
 
 - (void)viewTapped:(UIGestureRecognizer *)gesture
 {
-    
+    if ([self.delegate respondsToSelector:@selector(hideMenu)]) {
+        [self.delegate hideMenu];
+    }
 }
 
 - (void)didReceiveMemoryWarning

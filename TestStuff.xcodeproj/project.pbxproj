@@ -28,6 +28,7 @@
 		68A6A8D818C1234300DFF0FB /* AMBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A6A8D718C1234300DFF0FB /* AMBlurView.m */; };
 		68A6A8DB18C141B700DFF0FB /* MenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A6A8DA18C141B700DFF0FB /* MenuItemCell.m */; };
 		68BA5AED18C65CE100562482 /* iPhone_header_menu-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68BA5AEC18C65CE100562482 /* iPhone_header_menu-icon@2x.png */; };
+		68BA5AF018C67CE800562482 /* CBSiBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BA5AEF18C67CE800562482 /* CBSiBlurView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		68A6A8D918C141B700DFF0FB /* MenuItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemCell.h; sourceTree = "<group>"; };
 		68A6A8DA18C141B700DFF0FB /* MenuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemCell.m; sourceTree = "<group>"; };
 		68BA5AEC18C65CE100562482 /* iPhone_header_menu-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone_header_menu-icon@2x.png"; sourceTree = "<group>"; };
+		68BA5AEE18C67CE800562482 /* CBSiBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSiBlurView.h; sourceTree = "<group>"; };
+		68BA5AEF18C67CE800562482 /* CBSiBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSiBlurView.m; sourceTree = "<group>"; };
 		A0DFF62EE8C94D9EA8141CE0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -150,6 +153,8 @@
 				68A6A8D718C1234300DFF0FB /* AMBlurView.m */,
 				68A6A8D918C141B700DFF0FB /* MenuItemCell.h */,
 				68A6A8DA18C141B700DFF0FB /* MenuItemCell.m */,
+				68BA5AEE18C67CE800562482 /* CBSiBlurView.h */,
+				68BA5AEF18C67CE800562482 /* CBSiBlurView.m */,
 			);
 			path = TestStuff;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 			files = (
 				686F5B2E18BC21AC0039C0DE /* AppDelegate.m in Sources */,
 				68A6A8D818C1234300DFF0FB /* AMBlurView.m in Sources */,
+				68BA5AF018C67CE800562482 /* CBSiBlurView.m in Sources */,
 				686F5B2A18BC21AC0039C0DE /* main.m in Sources */,
 				68A6A8DB18C141B700DFF0FB /* MenuItemCell.m in Sources */,
 				680BB9D818C00500002026F2 /* SlideOutViewController.m in Sources */,

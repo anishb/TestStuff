@@ -31,11 +31,21 @@
                         <viewControllerLayoutGuide type="top" id="cLp-LS-pEK"/>
                         <viewControllerLayoutGuide type="bottom" id="zwq-us-jRm"/>
                     </layoutGuides>
-                    <view key="view" opaque="NO" contentMode="scaleToFill" id="tgj-lh-VWL" customClass="FXBlurView">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="tgj-lh-VWL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TNA-Gu-ag8" customClass="CBSiBlurView">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="blurView" destination="TNA-Gu-ag8" id="rXa-l1-0Rm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yj4-qq-e8Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
