@@ -76,7 +76,7 @@
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
 {
-    if ([touch.view isDescendantOfView:self.view]) {
+    if ([touch.view isDescendantOfView:self.tableView]) {
         return NO;
     }
     return YES;
