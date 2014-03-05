@@ -10,5 +10,6 @@
 
 @interface SlideOutViewController : UIViewController
 
+- (void)pushViewController:(UIViewController *)viewController;
 
 @end

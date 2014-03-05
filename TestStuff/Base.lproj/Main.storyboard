@@ -35,16 +35,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TNA-Gu-ag8" customClass="CBSiBlurView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNA-Gu-ag8" userLabel="CBSi Blur View" customClass="CBSiBlurView">
                                 <rect key="frame" x="0.0" y="0.0" width="160" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Zyp-xx-L6d">
+                                        <rect key="frame" x="0.0" y="64" width="160" height="504"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuTableViewCell" id="bNg-ji-noM" customClass="MenuTableViewCell">
+                                                <rect key="frame" x="0.0" y="22" width="160" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bNg-ji-noM" id="TzE-Hd-2Sg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYM-Z1-kdR">
+                                                            <rect key="frame" x="12" y="11" width="140" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="menuItemLabel" destination="OYM-Z1-kdR" id="VHn-tn-uqF"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BsN-Dv-Yew" id="2xj-sQ-dGH"/>
+                                            <outlet property="delegate" destination="BsN-Dv-Yew" id="9mJ-C8-Ilb"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Zyp-xx-L6d" secondAttribute="bottom" id="AYk-w8-Z9R"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zyp-xx-L6d" secondAttribute="trailing" id="KHb-W4-vVS"/>
+                                    <constraint firstAttribute="width" constant="160" id="R8J-Ib-Ppk"/>
+                                    <constraint firstItem="Zyp-xx-L6d" firstAttribute="leading" secondItem="TNA-Gu-ag8" secondAttribute="leading" id="ihc-2d-g0C"/>
+                                    <constraint firstItem="Zyp-xx-L6d" firstAttribute="top" secondItem="TNA-Gu-ag8" secondAttribute="top" constant="64" id="kgS-yl-agA"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TNA-Gu-ag8" firstAttribute="leading" secondItem="tgj-lh-VWL" secondAttribute="leading" id="aEy-82-A8G"/>
+                            <constraint firstAttribute="bottom" secondItem="TNA-Gu-ag8" secondAttribute="bottom" id="bXD-nw-SOL"/>
+                            <constraint firstItem="TNA-Gu-ag8" firstAttribute="top" secondItem="tgj-lh-VWL" secondAttribute="top" id="ceF-qN-ZoL"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="blurView" destination="TNA-Gu-ag8" id="rXa-l1-0Rm"/>
+                        <outlet property="tableView" destination="Zyp-xx-L6d" id="BRY-TJ-cCa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yj4-qq-e8Y" userLabel="First Responder" sceneMemberID="firstResponder"/>

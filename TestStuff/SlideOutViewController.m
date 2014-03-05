@@ -69,6 +69,11 @@ CGFloat const MENU_SLIDE_DELAY = 0.0;
     // Dispose of any resources that can be recreated.
 }
 
+- (void)pushViewController:(UIViewController *)viewController
+{
+    [self.navController pushViewController:viewController animated:YES];
+}
+
 #pragma mark - HomeViewControllerDelegate
 
 - (void)showMenu
